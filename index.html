@@ -27,6 +27,9 @@
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         header {
@@ -38,6 +41,8 @@
 
         main {
             padding: 20px;
+            flex: 1;
+            /* Flex: 1 permite que el contenido ocupe todo el espacio disponible antes del footer */
         }
 
         footer {
@@ -45,9 +50,6 @@
             color: white;
             text-align: center;
             padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
 
         button {
@@ -68,7 +70,7 @@
             margin-top: 20px;
         }
 
-        input, select {
+        input, select, textarea {
             padding: 10px;
             margin-bottom: 10px;
             width: 100%;
@@ -77,9 +79,14 @@
             border-radius: 4px;
         }
 
-        input:focus, select:focus {
+        input:focus, select:focus, textarea:focus {
             border-color: #2a9d8f;
             outline: none;
+        }
+
+        /* Agregamos espacio inferior al formulario para evitar que el footer lo cubra */
+        form {
+            padding-bottom: 20px;
         }
     </style>
 </head>
